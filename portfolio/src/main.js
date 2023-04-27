@@ -10,6 +10,9 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import './index.css'
 import App from './App.vue'
 
+//ChartJS
+import { Bar } from 'vue-chartjs'
+
 library.add(faGithub, faLinkedin);
 
 createApp(App)
