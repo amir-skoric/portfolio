@@ -6,12 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-//Styling (tailwind)
+//Styling (tailwind/css)
 import './index.css'
 import App from './App.vue'
 
-//ChartJS
-import { Bar } from 'vue-chartjs'
 
 library.add(faGithub, faLinkedin);
 

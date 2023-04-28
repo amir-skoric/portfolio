@@ -8,6 +8,5 @@ import MainAbout from './components/MainAbout.vue'
 <template>
   <MainHeader />
   <MainHero />
-  <h1 class="underline text-8xl text-center font-montserrat font-bold">Welcome to my webpage!</h1>
   <MainAbout />
 </template>
