@@ -9,7 +9,7 @@
             </div>
             <div class="flex flex-col justify-center items-center" ref="picture">
                 <div class="p-4 rounded-full bg-gradient-to-b from-primary to-secondary drop-shadow-xl">
-                    <img src="../assets/img/person.png" class="rounded-full">
+                    <img src="../assets/img/person.jpg" class="rounded-full">
                 </div>
                 <h2 class="font-montserrat mt-4 text-xl">Hello there! 😊</h2>
             </div>
