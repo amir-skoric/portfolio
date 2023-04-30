@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-gradient-to-b from-primary to-secondary p-2 mt-16 rounded-md drop-shadow-xl">
+    <div class="w-1/2 bg-gradient-to-b from-primary to-secondary p-2 rounded-md drop-shadow-xl container mx-auto mb-16">
         <div class="chart font-roboto flex flex-col w-full p-8  bg-black">
             <div class="flex flex-col justify-center items-center mb-8">
                 <h1 class="font-montserrat font-bold text-3xl">My skills</h1>
@@ -49,6 +49,6 @@
 
 <style>
 .bar {
-    @apply bg-primary my-3 py-3 font-roboto font-light rounded-sm
+    @apply bg-primary my-4 py-4 font-roboto font-light rounded-sm
 }
 </style>

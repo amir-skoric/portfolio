@@ -2,8 +2,8 @@
   <nav class="p-4 pb-0 flex justify-between font-montserrat items-center" ref="nav">
     <a href="#" class="hoverA hoverATransition"><img src="../assets/img/logo.png" class="h-16"></a>
     <div class="flex items-center gap-8 [&>a]:p-4">
-      <a href="#" class="hoverA hoverATransition underline underline-offset-4">Portfolio</a>
       <a href="#" class="hoverA hoverATransition underline underline-offset-4">About</a>
+      <a href="#" class="hoverA hoverATransition underline underline-offset-4">Portfolio</a>
       <a href="#" class="hoverA hoverATransition underline underline-offset-4">Contact</a>
     </div>
     <div class="flex items-center gap-8">

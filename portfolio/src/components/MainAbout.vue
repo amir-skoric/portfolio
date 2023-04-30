@@ -1,6 +1,6 @@
 <template>
-    <main class="about bg-[url('../src/assets/img/graphic-3.svg')] bg-cover bg-no-repeat bg-bottom">
-        <section class="container mx-auto px-32 flex flex-col justify-center items-center z-50 mb-32 mt-32">
+    <main class="about bg-[url('../src/assets/img/graphic-2.svg')] bg-cover bg-no-repeat bg-top">
+        <section class="container mx-auto px-32 flex flex-col justify-center items-center z-50 my-32">
             <h1 class="underline text-6xl text-center font-montserrat font-bold my-[5%]">Welcome to my webpage!</h1>
             <div>
                 <h2 class="text-2xl font-montserrat font-bold mb-8">About me</h2>
@@ -20,15 +20,15 @@
                     Microsoft
                     Windows and Apples MacOS operating system.</p>
             </div>
-            <MainChart/>
         </section>
+        <MainChart v-motion-fade-visible />
     </main>
 </template>
 
 <script setup>
-import MainChart from './MainChart.vue';
-
+    import MainChart from './MainChart.vue';
 </script>
+
 <style>
 /* fade bg to black*/
 .about {
