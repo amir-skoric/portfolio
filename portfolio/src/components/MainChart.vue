@@ -1,12 +1,11 @@
 <template>
-    <div class="gradient-bg w-full bg-gradient-to-b from-primary to-secondary p-2 mt-16 rounded-md drop-shadow-xl">
+    <div class="w-full bg-gradient-to-b from-primary to-secondary p-2 mt-16 rounded-md drop-shadow-xl">
         <div class="chart font-roboto flex flex-col w-full p-8  bg-black">
             <div class="flex flex-col justify-center items-center mb-8">
                 <h1 class="font-montserrat font-bold text-3xl">My skills</h1>
-                <h2 class="font-montserrat text-xl">How I would rate them from 0-10 </h2>
+                <h2 class="font-montserrat text-xl">How I would rate them from 1-10 </h2>
             </div>
-            <div class="scale flex justify-between font-montserrat text-sm">
-                <p>0</p>
+            <div class="scale flex justify-between font-montserrat text-sm border-b-2 pb-2 mb-8">
                 <p>1</p>
                 <p>2</p>
                 <p>3</p>
@@ -19,12 +18,30 @@
                 <p>10</p>
             </div>
             <div class="bars">
-                <div class="bar w-[95%]">HTML</div>
-                <div class="bar w-[75%]">JavaScript</div>
-                <div class="bar w-[85%]">CSS</div>
-                <div class="bar w-[90%]">Photoshop</div>
-                <div class="bar w-[85%]">Music production</div>
-                <div class="bar w-[100%]">"Tech Savvy-ness"</div>
+                <div>
+                    <p>HTML</p>
+                    <div class="bar w-[100%]"></div>
+                </div>
+                <div>
+                    <p>CSS</p>
+                    <div class="bar w-[90%]"></div>
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <div class="bar w-[80%]"></div>
+                </div>
+                <div>
+                    <p>Music Production</p>
+                    <div class="bar w-[80%]"></div>
+                </div>
+                <div>
+                    <p>Graphics Design</p>
+                    <div class="bar w-[90%]"></div>
+                </div>
+                <div>
+                    <p>"Tech-savyness"</p>
+                    <div class="bar w-[100%]"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -32,6 +49,6 @@
 
 <style>
 .bar {
-    @apply bg-primary my-2 py-3 pl-2 font-roboto font-light rounded-lg
+    @apply bg-primary my-3 py-3 font-roboto font-light rounded-sm
 }
 </style>

@@ -10,9 +10,13 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import './index.css'
 import App from './App.vue'
 
+//motionplugin (animation on view)
+import { MotionPlugin } from '@vueuse/motion'
+
 
 library.add(faGithub, faLinkedin);
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
+.use(MotionPlugin)
 .mount('#app')

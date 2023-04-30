@@ -8,5 +8,5 @@ import MainAbout from './components/MainAbout.vue'
 <template>
   <MainHeader />
   <MainHero />
-  <MainAbout />
+  <MainAbout v-motion-fade-visible />
 </template>
