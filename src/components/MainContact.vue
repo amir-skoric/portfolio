@@ -1,5 +1,5 @@
 <template>
-    <div class="contact bg-[url('../src/assets/img/graphic-3.svg')] bg-cover bg-no-repeat bg-bottom my-32 md:my-0">
+    <div class="contact  bg-cover bg-no-repeat bg-bottom my-32 md:my-0">
         <div class="container mx-auto px-32 md:px-8 font-montserrat flex flex-col space-y-4 justify-normal">
             <h1 class="font-bold text-2xl my-16 md:my-8">Contact me</h1>
             <h3 class="font-bold">E-mail</h3>

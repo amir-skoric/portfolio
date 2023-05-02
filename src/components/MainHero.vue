@@ -1,5 +1,5 @@
 <template>
-    <section class="hero bg-[url('../src/assets/img/graphic-1.svg')] bg-cover bg-no-repeat bg-center justify-center items-center flex flex-col">
+    <section class="hero bg-cover bg-no-repeat bg-center justify-center items-center flex flex-col">
         <img src="../assets/img/logo.png" class="h-32 xl:hidden md:block mt-8">
         <div class="container mx-auto px-12 py-36 flex flex-row sm:flex-col justify-center items-center space-y-8 z-50 mb-32 sm:mb-16 ">
             <div class="flex flex-col space-y-4 sm:justify-center sm:items-center" ref="bigText">

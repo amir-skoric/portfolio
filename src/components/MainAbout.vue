@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[url('../src/assets/img/graphic-2.svg')] bg-cover bg-no-repeat bg-top">
+    <section class=" bg-cover bg-no-repeat bg-top">
         <div class="container mx-auto px-32 md:px-8 flex flex-col justify-center items-center z-50 my-32 sm:my-16 md:my-8">
             <h1 class="underline text-6xl md:text-2xl text-center font-montserrat font-bold my-[5%]">Welcome to my webpage!</h1>
             <div>
