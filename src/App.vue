@@ -9,14 +9,12 @@
 
 <script>
 
-import { defineAsyncComponent } from "vue"
-
-const MainHeader = defineAsyncComponent(() => import('./components/MainHeader.vue'))
-const MainHero = defineAsyncComponent(() => import('./components/MainHero.vue'))
-const MainAbout = defineAsyncComponent(() => import('./components/MainAbout.vue'))
-const MainCases = defineAsyncComponent(() => import('./components/MainCases.vue'))
-const MainContact = defineAsyncComponent(() => import('./components/MainContact.vue'))
-const ScrollToTop = defineAsyncComponent(() => import('./components/ScrollToTop.vue'))
+import MainHeader from './components/MainHeader.vue'
+import MainHero from './components/MainHero.vue'
+import MainAbout from './components/MainAbout.vue'
+import MainCases from './components/MainCases.vue'
+import MainContact from './components/MainContact.vue'
+import ScrollToTop from './components/ScrollToTop.vue'
 
 export default {
   components: {
