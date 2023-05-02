@@ -1,14 +1,15 @@
 <template>
-    <main class="hero bg-[url('../src/assets/img/graphic-1.svg')] bg-cover bg-no-repeat bg-center">
-        <section class="container mx-auto px-12 flex justify-center items-center z-50 mb-32 h-[90vh]">
-            <div class="flex flex-col gap-4" ref="bigText">
-                <h1 class="[word-spacing:100vw] text-8xl text-primary font-bold font-montserrat leading-snug">Amir Skoric
+    <main class="hero bg-[url('../src/assets/img/graphic-1.svg')] bg-cover bg-no-repeat bg-center justify-center items-center flex flex-col">
+        <img src="../assets/img/logo.png" class="h-32 xl:hidden md:block mt-8">
+        <section class="container mx-auto px-12 flex 2xl:flex-row sm:flex-col justify-center items-center z-50 mb-32 sm:mb-16 h-[90vh] md:h-[100vh] sm:h-[100vh]">
+            <div class="flex flex-col gap-4 sm:justify-center sm:items-center" ref="bigText">
+                <h1 class="[word-spacing:100vw] text-8xl sm:text-6xl text-primary font-bold font-montserrat leading-snug sm:text-center">Amir Skoric
                 </h1>
-                <h2 class="underline underline-offset-4 text-6xl font-roboto">Web developer.</h2>
-                <h3 class="text-xl font-roboto font-light">HTML, CSS and JavaScript</h3>
+                <h2 class="underline underline-offset-4 text-6xl font-roboto sm:text-4xl">Web developer.</h2>
+                <h3 class="text-xl font-roboto font-light text-start">HTML, CSS and JavaScript</h3>
             </div>
-            <div class="flex flex-col justify-center items-center" ref="picture">
-                <div class="p-4 rounded-full bg-gradient-to-b from-primary to-secondary drop-shadow-xl">
+            <div class="flex flex-col justify-center items-center h-1/2 sm:w-2/3" ref="picture">
+                <div class="p-4 sm:p-2 rounded-full bg-gradient-to-b from-primary to-secondary drop-shadow-xl">
                     <img src="../assets/img/person.jpg" class="rounded-full">
                 </div>
                 <h2 class="font-montserrat mt-4 text-xl">Hello there! 😊</h2>
@@ -43,6 +44,6 @@ export default {
 <style>
 /* fade bg to black*/
 .hero {
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 }
 </style>

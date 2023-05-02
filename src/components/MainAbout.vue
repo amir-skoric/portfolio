@@ -1,9 +1,9 @@
 <template>
-    <main class="about bg-[url('../src/assets/img/graphic-2.svg')] bg-cover bg-no-repeat bg-top">
-        <section class="container mx-auto px-32 flex flex-col justify-center items-center z-50 my-32">
-            <h1 class="underline text-6xl text-center font-montserrat font-bold my-[5%]">Welcome to my webpage!</h1>
+    <main class="bg-[url('../src/assets/img/graphic-2.svg')] bg-cover bg-no-repeat bg-top">
+        <section class="container mx-auto px-32 md:px-8 flex flex-col justify-center items-center z-50 my-32 sm:my-16 md:my-8">
+            <h1 class="underline text-6xl md:text-2xl text-center font-montserrat font-bold my-[5%]">Welcome to my webpage!</h1>
             <div>
-                <h2 class="text-2xl font-montserrat font-bold mb-8">About me</h2>
+                <h2 class="text-2xl md:text-xl font-montserrat font-bold mb-8">About me</h2>
                 <p class="text-md font-roboto font-light text-justify">Hello there. My name is Amir Skoric and I am 22 years old. I
                     come from Bornholm,
                     which might surprise some of you. I study at “IBA Erhvervsakademi Kolding”, where I am studying for the
@@ -21,7 +21,7 @@
                     Windows and Apples MacOS operating system.</p>
             </div>
         </section>
-        <MainChart v-motion-fade-visible />
+        <MainChart />
     </main>
 </template>
 
@@ -30,8 +30,5 @@
 </script>
 
 <style>
-/* fade bg to black*/
-.about {
-    mask-image: linear-gradient(to top, black 95%, transparent 100%);
-}
+
 </style>
