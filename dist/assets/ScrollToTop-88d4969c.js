@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as n}from"./index-189ea3be.js";const s={};function l(t,o){return r(),n("button",{onClick:o[0]||(o[0]=c=>t.$emit("scrollTo","header")),class:"p-4 bg-primary btnHover btnHoverTransition sticky float-right right-10 bottom-10 rounded-md font-montserrat drop-shadow-md md:hidden"},"Scroll to top!")}const d=e(s,[["render",l]]);export{d as default};
