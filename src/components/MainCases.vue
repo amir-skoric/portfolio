@@ -6,10 +6,7 @@
                 <h2 class="text-xl font-bold">Kold Festival</h2>
                 <p>Click to play video</p>
                 <div class="my-4 text-center">
-                    <video controls>
-                        <source src="../assets/vid/case1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+
                     <a href="https://www.koldfestival.dk/" target="_blank" class="my-4 underline underline-offset-4">Click here
                         to visit the website</a>
                 </div>
