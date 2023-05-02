@@ -21,7 +21,7 @@
                     Windows and Apples MacOS operating system.</p>
             </div>
         </section>
-        <MainChart />
+        <MainChart v-motion-fade-visible />
     </main>
 </template>
 
