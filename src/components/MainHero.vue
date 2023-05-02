@@ -1,8 +1,8 @@
 <template>
-    <main class="hero bg-[url('../src/assets/img/graphic-1.svg')] bg-cover bg-no-repeat bg-center justify-center items-center flex flex-col">
+    <section class="hero bg-[url('../src/assets/img/graphic-1.svg')] bg-cover bg-no-repeat bg-center justify-center items-center flex flex-col">
         <img src="../assets/img/logo.png" class="h-32 xl:hidden md:block mt-8">
-        <section class="container mx-auto px-12 flex 2xl:flex-row sm:flex-col justify-center items-center z-50 mb-32 sm:mb-16 h-[90vh] md:h-[100vh] sm:h-[100vh]">
-            <div class="flex flex-col gap-4 sm:justify-center sm:items-center" ref="bigText">
+        <div class="container mx-auto px-12 py-36 flex 2xl:flex-row sm:flex-col justify-center items-center space-y-8 z-50 mb-32 sm:mb-16 ">
+            <div class="flex flex-col space-y-4 sm:justify-center sm:items-center" ref="bigText">
                 <h1 class="[word-spacing:100vw] text-8xl sm:text-6xl text-primary font-bold font-montserrat leading-snug sm:text-center">Amir Skoric
                 </h1>
                 <h2 class="underline underline-offset-4 text-6xl font-roboto sm:text-4xl">Web developer.</h2>
@@ -14,8 +14,8 @@
                 </div>
                 <h2 class="font-montserrat mt-4 text-xl">Hello there! 😊</h2>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -45,5 +45,6 @@ export default {
 /* fade bg to black*/
 .hero {
     mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    --webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 }
 </style>

@@ -2,6 +2,6 @@ export default {
   plugins: {
       tailwindcss: {},
       autoprefixer: {},
-      ...(process.env.NODE.env === 'production' ? { cssnano: {} } : {})
+      ...(process.env.NODE.ENV === 'production' ? { cssnano: {} } : {})
   },
 }
