@@ -1,9 +1,9 @@
 <template>
   <MainHeader id="header" @scrollTo="scrollMeTo" />
   <MainHero id="hero" />
-  <MainAbout id="about" />
-  <MainCases id="cases" />
-  <MainContact id="contact"  />
+  <MainAbout id="about" v-motion-fade-visible />
+  <MainCases id="cases" v-motion-fade-visible />
+  <MainContact id="contact" v-motion-fade-visible />
   <ScrollToTop @scrollTo="scrollMeTo" />
 </template>
 
@@ -24,6 +24,10 @@ export default {
     MainCases,
     MainContact,
     ScrollToTop
+  },
+
+  mounted() {
+    window.scrollTo(0, 1)
   },
 
   methods: {

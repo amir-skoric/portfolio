@@ -13,8 +13,8 @@ export default {
       },
       screens: {
         xl: { max: "3000px" },
-        lg: { max: "1023px" },
-        md: { max: "767px" },
+        lg: { max: "1030px" },
+        md: { max: "800px" },
         sm: { max: "666px" },
         xsm: { max: "399px"}
       }

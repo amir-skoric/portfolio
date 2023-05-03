@@ -1,5 +1,6 @@
 <template>
-    <div class="w-1/2 md:w-[90%] lg:w-[90%] bg-gradient-to-b from-primary to-secondary p-2 rounded-md drop-shadow-xl container mx-auto mb-32">
+    <div
+        class="w-1/2 md:w-[90%] lg:w-[90%] bg-gradient-to-b from-primary to-secondary p-2 rounded-md drop-shadow-xl container mx-auto mb-32">
         <div class="chart font-roboto flex flex-col w-full p-8  bg-black">
             <div class="flex flex-col justify-center items-center mb-8">
                 <h1 class="font-montserrat font-bold text-3xl">My skills</h1>
