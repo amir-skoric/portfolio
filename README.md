@@ -43,9 +43,9 @@ Then open http://localhost:5173
 The site uses relative paths (`base: './'` in `vite.config.js`), so the built files work in the `/portfolio/` folder.
 
 ```bash
-npm run build
+npm run deploy
 ```
 
-Then put the contents of `dist/` on the `gh-pages` branch (that branch is what GitHub Pages shows).
+This builds the site and puts the contents of `dist/` on the `gh-pages` branch (that branch is what GitHub Pages shows).
 
 The old Vue version of this portfolio (2023) is kept on the `old-vue-portfolio` branch.
