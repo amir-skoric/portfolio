@@ -1,9 +1,9 @@
+import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tailwindcss from 'tailwindcss'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), tailwindcss()],
-  base: '/portfolio/'
+  plugins: [react()],
+  // Relative paths, so the built site works on GitHub Pages (e.g. /portfolio/) or any other folder.
+  base: './',
 })

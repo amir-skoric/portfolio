@@ -1,0 +1,32 @@
+/* ================================================
+   THEME - change colors and fonts HERE only.
+   "NES classic" palette: soft dark grey base (easier on the eyes than pure black),
+   NES red for accents, NES blue as the second color, small 8-bit touches.
+   ================================================ */
+:root {
+  /* PRIMARY: NES red (small labels, buttons, highlights) */
+  --primary: #e45a5a;
+  --primary-light: #f08585;
+
+  /* SECONDARY: NES blue */
+  --secondary: #4b6bd6;
+  --secondary-light: #8aa0ee;
+  --secondary-dark: #1b2a5e; /* hard "pixel" shadows */
+
+  /* Neutrals */
+  --bg: #111318; /* page background: dark grey, not pure black */
+  --surface: #191c24; /* small tiles (stats, logos, icons) */
+  --text: #ececec; /* soft white */
+  --text-muted: #a2a6b0;
+  --line: #262b36; /* quiet borders and dividers */
+  --line-strong: #394050; /* outlines that need to be a bit more visible */
+
+  /* Fonts */
+  --font-pixel: 'Press Start 2P', monospace; /* 8-bit accent: only the name in the hero */
+  --font-heading: 'IBM Plex Mono', monospace; /* names of jobs, schools, projects */
+  --font-text: 'IBM Plex Mono', monospace; /* everything else */
+
+  /* Pixel step used for borders and shadows */
+  --px: 4px;
+  --content-width: 1200px;
+}

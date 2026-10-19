@@ -1,0 +1,525 @@
+/* ================================================
+   LAYOUT + LOOK  ("sidebar" version)
+   - Big screens: the sidebar (photo, name, menu, chiptune player) stays on the left,
+     all the parts scroll by on the right.
+   - Phones/tablets: everything stacks; each part's title sticks to the top while you read it.
+   - One font (IBM Plex Mono); the pixel font is only used for the name.
+   Colors and fonts come from theme.css.
+   ================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth; scroll-padding-top: 72px;
+  scrollbar-color: var(--line-strong) var(--bg);
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+:focus-visible { outline: 2px dashed var(--primary); outline-offset: 4px; }
+::selection { background: var(--primary); color: #10151b; }
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border: 3px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+ul, ol, dl { list-style: none; }
+.icon { width: 1em; height: 1em; fill: currentColor; flex-shrink: 0; }
+button { font: inherit; color: inherit; }
+
+/* ---------- The two columns ---------- */
+/* Background swirls: a layer behind the top of the page that fades out softly and scrolls away.
+   The whole picture fits inside it (nothing is cut off). */
+.site { position: relative; }
+.bg-swirls {
+  position: absolute; top: 0; left: 0; right: 0; height: 620px; z-index: -1; pointer-events: none;
+  background: url('../assets/waves.svg') no-repeat center / 100% 100%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, rgba(0, 0, 0, 0.45) 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 30%, rgba(0, 0, 0, 0.45) 65%, transparent 100%);
+}
+
+.layout {
+  max-width: 1280px; margin: 0 auto; padding: 0 56px;
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 88px;
+}
+
+/* ---------- Sidebar ---------- */
+.side {
+  position: sticky; top: var(--side-top, 0px); align-self: start; min-height: 100vh;
+  padding: 40px 0 40px; display: flex; flex-direction: column;
+}
+/* the divider between sidebar and content: a thin line on the right edge of the sidebar.
+   The sidebar is at least as tall as the screen, so the line fades out at its top and bottom. */
+.side {
+  border-right: 1px solid transparent;
+  border-image: linear-gradient(to bottom, transparent, var(--line-strong) 22%, var(--line-strong) 78%, transparent) 1;
+}
+.side-me { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+/* the photo: a bit bigger on desktop (smaller again on tablets and phones, see below) */
+.side-photo { width: 104px; height: 104px; object-fit: cover; border: 2px solid var(--primary); display: block; }
+/* the name: the one place the pixel font is used */
+.side-name { font-family: var(--font-pixel); font-weight: 400; text-transform: uppercase; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.2; color: var(--primary); margin-bottom: 16px; }
+.side-role { font-size: 20px; line-height: 1.4; margin-bottom: 12px; }
+.side-intro { color: var(--text-muted); max-width: 380px; }
+.side-cv { align-self: flex-start; justify-self: start; margin-top: 18px; } /* "Download CV" under the intro (no full width, also in the tablet grid) */
+
+/* "About me" in the sidebar: a short line with a red dash, one paragraph, the rest behind "Read more" */
+.side-about { margin-top: 28px; max-width: 400px; }
+.side-about-title {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 4px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text);
+}
+.side-about-title::before { content: ''; width: 20px; height: 2px; background: var(--primary); }
+.side-about p { font-size: 14px; line-height: 1.65; color: var(--text-muted); }
+.side-about-more { margin-top: 12px; display: grid; gap: 12px; }
+.side-about-more[hidden] { display: none; }
+.side-about .stats { margin-top: 4px; gap: 4px 20px; }
+.side-about .more-toggle { margin: 6px 0 0; }
+.side-about-more + .more-toggle { margin-top: 12px; }
+/* the chiptune line + the player, kept together at the bottom of the sidebar */
+.side-player { margin-top: auto; }
+.side-player .player { margin-top: 0; }
+.side-music { max-width: 400px; margin-bottom: 8px; font-size: 12px; line-height: 1.6; color: var(--text-muted); }
+
+/* menu: a short grey line before each item; the part you're reading gets a long red line */
+.side-nav { display: flex; flex-direction: column; align-items: flex-start; margin: 32px 0 28px; }
+.side-nav a {
+  display: flex; align-items: center; gap: 16px; padding: 8px 0;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-muted); text-decoration: none;
+}
+.side-nav a::before { content: ''; width: 32px; height: 1px; background: var(--line-strong); transition: width 0.2s, background-color 0.2s; }
+.side-nav a:hover, .side-nav a.on { color: var(--text); }
+.side-nav a:hover::before { width: 56px; background: var(--text); }
+.side-nav a.on::before { width: 72px; height: 2px; background: var(--primary); }
+
+.side-foot { display: flex; align-items: center; gap: 20px; margin-top: 22px; font-size: 13px; color: var(--text-muted); }
+
+/* short laptop screens: tighter sidebar, so the whole player still fits on screen */
+@media (min-width: 1001px) and (max-height: 960px) {
+  .side { padding: 24px 0 24px; }
+  .side .side-lang { margin-bottom: 16px; }
+  .side-me { margin-bottom: 16px; }
+  .side-photo { width: 84px; height: 84px; }
+  .side-name { margin-bottom: 10px; }
+  .side-role { font-size: 18px; margin-bottom: 8px; }
+  .side-nav { margin: 24px 0 24px; }
+  .side-nav a { padding: 5px 0; }
+  .side .player { padding: 10px 12px; gap: 8px 12px; }
+  .side-foot { margin-top: 14px; }
+  .side-about { margin-top: 22px; }
+  .side-cv { margin-top: 14px; }
+}
+.side-foot a { text-decoration: none; }
+.side-foot a:hover { color: var(--primary); }
+.side-lang { display: flex; margin-bottom: 28px; } /* DA/EN at the top of the sidebar, above the photo */
+
+.lang-toggle { display: flex; }
+.lang-toggle button {
+  font-size: 12px; line-height: 1; cursor: pointer;
+  padding: 8px 10px; background: transparent; color: var(--text-muted);
+  border: 1px solid var(--line-strong);
+}
+.lang-toggle button + button { border-left: 0; }
+.lang-toggle button:hover { color: var(--primary); }
+.lang-toggle button.active { background: var(--primary); border-color: var(--primary); color: #10151b; }
+
+/* ---------- Chiptune player ----------
+   In the sidebar: 3 lines (song + level meter / seek bar / [prev | PLAY | next] + volume).
+   After you press play, a copy floats at the bottom of the screen while the sidebar one is out of view
+   ("floating"), with an X in the corner. */
+.player {
+  position: relative; margin-top: auto; max-width: 380px;
+  display: grid; align-items: center; gap: 12px 14px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "info info meter" "seek seek seek" "transport sound sound"; /* volume uses the space next to the buttons */
+  padding: 14px; background: var(--surface); border: 1px solid var(--line-strong);
+}
+.player button { background: none; border: 0; cursor: pointer; display: grid; place-items: center; color: inherit; }
+
+/* previous · PLAY · next: small and light. A square red play button in the middle (square like the rest
+   of the site), the skip buttons are just icons that get a square highlight on hover. */
+.player-transport { grid-area: transport; display: flex; align-items: center; gap: 4px; }
+.player .player-skip { width: 28px; height: 34px; color: var(--text-muted); transition: color 0.15s, background-color 0.15s; }
+.player .player-skip:hover { color: var(--text); background: var(--line); }
+.player-skip .icon { width: 13px; height: 13px; }
+.player .player-play {
+  width: 34px; height: 34px; background: var(--primary); color: #10151b;
+  transition: background-color 0.15s, transform 0.15s;
+}
+.player .player-play:hover { background: var(--primary-light); }
+.player-play .icon { width: 14px; height: 14px; }
+.player-transport button:active .icon { transform: translateY(1px); } /* a tiny press */
+.player.loading .player-play { opacity: 0.6; cursor: wait; }
+
+.player-info { grid-area: info; min-width: 0; }
+.player-label { font-size: 11px; line-height: 1.5; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player.error .player-label { color: var(--primary); }
+.player-title { font-weight: 600; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player-title span { color: var(--text-muted); font-weight: 400; }
+/* little level meter (bars move with the music) */
+.player-meter { grid-area: meter; display: flex; align-items: flex-end; gap: 3px; height: 24px; }
+.player-meter i { width: 5px; height: 100%; background: var(--secondary-light); transform: scaleY(0.1); transform-origin: bottom; }
+.player-seek {
+  grid-area: seek; display: flex; align-items: center; gap: 10px;
+  font-size: 12px; color: var(--text-muted); font-variant-numeric: tabular-nums;
+}
+/* mute + volume */
+.player-sound { grid-area: sound; justify-self: end; display: flex; align-items: center; gap: 4px; }
+.player-sound button { width: 32px; height: 32px; color: var(--text-muted); transition: color 0.15s; }
+.player-sound button:hover { color: var(--primary); }
+.player-sound .icon { width: 16px; height: 16px; }
+.player-volume { width: 120px; }
+
+/* the sliders (seek + volume): thin line, red part = played / volume, square "pixel" handle */
+.player-range { -webkit-appearance: none; appearance: none; width: 100%; height: 22px; background: transparent; cursor: pointer; }
+.player-range::-webkit-slider-runnable-track {
+  height: 4px; background: linear-gradient(to right, var(--primary) var(--fill, 0%), var(--line-strong) var(--fill, 0%));
+}
+.player-range::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; margin-top: -4px; background: var(--text); border: 0; }
+.player-range::-moz-range-track { height: 4px; background: var(--line-strong); }
+.player-range::-moz-range-progress { height: 4px; background: var(--primary); }
+.player-range::-moz-range-thumb { width: 12px; height: 12px; background: var(--text); border: 0; border-radius: 0; }
+.player-range:hover::-webkit-slider-thumb { background: var(--primary); }
+.player-range:hover::-moz-range-thumb { background: var(--primary); }
+.player-range:disabled { cursor: default; opacity: 0.5; }
+.player-range:disabled::-webkit-slider-thumb { background: var(--line-strong); }
+.player-range:disabled::-moz-range-thumb { background: var(--line-strong); }
+
+/* the floating copy: 2 lines ([prev | PLAY | next] + song + volume / seek bar), centered at the bottom of the screen */
+.player.floating {
+  position: fixed; left: 50%; bottom: 16px; z-index: 30; translate: -50% 0;
+  width: calc(100% - 32px); max-width: 560px; margin: 0; padding: 10px 12px; gap: 8px 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5); /* lifts it off the page a little so it reads on top of the text */
+  animation: player-rise 0.25s ease-out;
+}
+.player.floating { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "transport info sound" "seek seek seek"; }
+.player.floating .player-meter { display: none; }
+.player.floating .player-volume { width: 90px; }
+@keyframes player-rise { from { opacity: 0; transform: translateY(16px); } }
+@media (prefers-reduced-motion: reduce) { .player.floating { animation: none; } }
+/* the little X in the top right corner of the floating player: closes it and stops the music */
+.player .player-close {
+  position: absolute; top: -12px; right: -12px; width: 26px; height: 26px;
+  background: var(--bg); border: 1px solid var(--line-strong); color: var(--text-muted);
+  transition: color 0.15s, border-color 0.15s;
+}
+.player .player-close:hover { color: var(--primary); border-color: var(--primary); }
+.player-close .icon { width: 12px; height: 12px; }
+/* leave room at the bottom of the page, so the floating player never covers the footer or the "Top" button */
+.with-floating-player .footer { padding-bottom: 120px; }
+.with-floating-player .btn.to-top { bottom: 112px; }
+
+/* ---------- Right side: the parts ---------- */
+.content { padding: 72px 0 0; min-width: 0; }
+.section + .section { margin-top: 128px; }
+/* Each part starts with a clear title: red line + big white title + a thin line to the right edge
+   (the red line matches the sidebar menu) */
+.section-title {
+  display: flex; align-items: center; gap: 16px;
+  font-size: 20px; font-weight: 700; line-height: 1.3; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text); margin-bottom: 36px;
+}
+.section-title::before { content: ''; flex-shrink: 0; width: 32px; height: 2px; background: var(--primary); }
+.section-title::after { content: ''; flex: 1; min-width: 24px; height: 1px; background: var(--line-strong); }
+.subhead { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px; }
+
+/* shared bits */
+.frame { display: block; overflow: hidden; background: var(--surface); border: 1px solid var(--line-strong); }
+.label { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; line-height: 1.6; color: var(--primary); }
+.label .icon { width: 13px; height: 13px; }
+.meta, .where { font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+.text { margin-bottom: 16px; }
+.text:last-child { margin-bottom: 0; }
+/* tags as small soft-blue pills */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { font-size: 12px; line-height: 1.5; padding: 3px 12px; border-radius: 99px; background: rgba(75, 107, 214, 0.14); color: var(--secondary-light); }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  font-size: 14px; font-weight: 600; line-height: 1; min-height: 44px; padding: 0 20px;
+  color: #10151b; background: var(--primary); border: 1px solid var(--primary);
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn:hover { background: var(--primary-light); border-color: var(--primary-light); }
+.btn:disabled { opacity: 0.6; cursor: wait; }
+.btn.alt { background: transparent; color: var(--text); border-color: var(--line-strong); }
+.btn.alt:hover { border-color: var(--text); }
+.btn.small { min-height: 38px; padding: 0 14px; font-size: 13px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+/* the quick facts in "About me" as one light line ("AGE 26   DEGREE BA in ...") */
+.stats { display: flex; flex-wrap: wrap; gap: 6px 28px; margin-top: 28px; }
+.stat { display: flex; align-items: baseline; gap: 8px; }
+.stat dt { font-size: 11px; line-height: 1.5; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.stat dd { font-weight: 600; font-size: 14px; line-height: 1.4; }
+
+/* Experience + Education: one row per job/school, date on the left */
+.timeline { display: flex; flex-direction: column; gap: 40px; }
+.timeline-item { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 24px; }
+.timeline-when { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding-top: 2px; }
+.period { font-size: 12px; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.timeline-when .where { font-size: 12px; }
+.badge { font-size: 11px; line-height: 1; padding: 4px 8px; background: var(--primary); color: #10151b; }
+.timeline-body h3 { font-weight: 600; font-size: 16px; line-height: 1.4; margin-bottom: 4px; }
+.points { font-size: 14px; color: var(--text-muted); }
+.job-tags { margin-top: 8px; }
+
+/* Skills & tools: logo carousel (moved by LogoCarousel.jsx) */
+.skills-box { margin-top: 72px; min-width: 0; }
+.carousel {
+  overflow: hidden; padding: 6px 0;
+  cursor: grab; user-select: none; -webkit-user-select: none; touch-action: pan-y;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.carousel.dragging { cursor: grabbing; }
+.carousel:focus-visible { outline-offset: -2px; }
+.carousel-track { display: flex; width: max-content; will-change: transform; }
+.carousel-row { display: flex; align-items: stretch; }
+.logo-group { padding: 4px 32px; border-left: 1px solid var(--line); }
+.logo-group h4 { font-weight: 600; font-size: 13px; line-height: 1.5; color: var(--primary); margin-bottom: 14px; }
+.logo-list { display: grid; grid-template-columns: repeat(var(--cols), 76px); gap: 14px 10px; }
+.carousel-item { width: 76px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.carousel-name { font-size: 12px; line-height: 1.3; color: var(--text-muted); }
+.logo-tile {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 24px; pointer-events: none;
+}
+.carousel-item:hover .logo-tile { color: var(--primary); border-color: var(--primary); }
+
+/* Projects: the featured case (big picture on top), then the other projects as rows */
+.project-part + .project-part { margin-top: 72px; }
+.showcase-media { margin-bottom: 22px; }
+.showcase-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.showcase-media:hover { border-color: var(--primary); }
+.showcase-body h3 { font-weight: 600; font-size: 22px; line-height: 1.3; margin-bottom: 4px; }
+.showcase-body .meta { margin-bottom: 14px; }
+.showcase-body .text { color: var(--text-muted); }
+
+.project-grid { display: flex; flex-direction: column; gap: 40px; }
+.project-card { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 4px 24px; align-items: start; }
+.project-card > :not(.project-thumb, .thumb-btn) { grid-column: 2; }
+.project-card > .project-thumb, .project-card > .thumb-btn { grid-row: 1 / span 9; }
+.project-thumb { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.thumb-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.thumb-btn .project-thumb { transition: border-color 0.15s; }
+.thumb-btn:hover .project-thumb { border-color: var(--primary); }
+.project-thumb.placeholder {
+  display: grid; place-items: center; color: var(--line-strong);
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 20px 20px,
+    var(--surface);
+}
+.project-thumb.placeholder .icon { width: 32px; height: 32px; }
+.project-card .label { margin-bottom: 4px; }
+.project-card h3 { font-weight: 600; font-size: 16px; line-height: 1.4; }
+.project-card .meta { margin-bottom: 8px; }
+.project-card .text { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; }
+.project-card .btn-row { margin-top: 16px; }
+
+/* pop-ups: the zoomed design screen + the running demo app */
+.slide-arrow {
+  width: 36px; height: 36px; flex-shrink: 0; display: grid; place-items: center; cursor: pointer;
+  background: var(--bg); color: var(--text-muted); border: 1px solid var(--line-strong);
+}
+.slide-arrow .icon { width: 14px; height: 14px; transform: rotate(-90deg); }
+.slide-arrow.prev .icon { transform: rotate(90deg); }
+.slide-arrow:hover { color: var(--primary); border-color: var(--primary); }
+.zoom-stage img { touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
+.zoom-foot { display: flex; align-items: center; gap: 24px; }
+.zoom-count { font-size: 13px; color: var(--text-muted); }
+.zoom, .app-modal {
+  margin: auto; padding: 0; border: 0; background: transparent; overflow: visible; max-width: none; max-height: none;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+.zoom::backdrop, .app-modal::backdrop { background: rgba(8, 11, 15, 0.9); }
+.zoom-stage { display: flex; align-items: center; gap: 16px; }
+.zoom-stage img { display: block; height: min(86vh, 962px); width: auto; max-width: calc(100vw - 140px); object-fit: contain; border-radius: 28px; }
+.app-modal-phone {
+  width: 375px; height: min(812px, calc(100vh - 110px)); padding: 12px;
+  background: #0b0f14; border: 1px solid var(--line-strong); border-radius: 48px;
+}
+.app-modal-phone iframe { width: 100%; height: 100%; border: 0; border-radius: 36px; display: block; background: #1c3796; }
+.app-modal-close { flex-shrink: 0; }
+/* the zoom with wide desktop screenshots (square corners, like the site) */
+.zoom.wide .zoom-stage img { width: min(1500px, calc(100vw - 140px)); height: auto; max-height: calc(100vh - 120px); border-radius: 0; }
+
+/* "Read more" on a project card: the longer story (square bullets, like the rest of the site) */
+.more-toggle {
+  display: inline-flex; align-items: center; gap: 8px; padding: 0; margin-bottom: 16px;
+  border: 0; background: none; font: inherit; font-size: 13px; color: var(--primary); cursor: pointer;
+}
+.more-toggle:hover { color: var(--primary-light); text-decoration: underline; text-underline-offset: 4px; }
+.more-arrow { width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.more-toggle[aria-expanded="true"] .more-arrow { transform: translateY(2px) rotate(-135deg); }
+.project-details {
+  display: grid; gap: 20px; margin-bottom: 18px; padding-left: 16px;
+  border-left: 1px solid var(--line-strong); font-size: 14px; line-height: 1.65; color: var(--text-muted);
+}
+.project-details[hidden] { display: none; }
+.project-details h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.project-details ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.project-details li { position: relative; padding-left: 16px; }
+.project-details li::before { content: ''; position: absolute; left: 0; top: 0.68em; width: 5px; height: 5px; background: var(--line-strong); }
+
+/* the demo pop-up as a browser window (for the apps made for big screens) */
+.app-modal-browser {
+  width: min(1240px, calc(100vw - 64px)); height: min(860px, calc(100vh - 110px));
+  display: flex; flex-direction: column; background: #0b0f14; border: 1px solid var(--line-strong);
+}
+.app-modal-bar { flex-shrink: 0; display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-bottom: 1px solid var(--line-strong); }
+.app-modal-bar span { width: 9px; height: 9px; background: var(--line-strong); }
+.app-modal-bar p { margin: 0 auto; padding-right: 39px; font-size: 12px; color: var(--text-muted); }
+.app-modal-browser iframe { flex: 1; width: 100%; min-height: 0; border: 0; display: block; background: #fff; }
+
+/* Contact */
+.contact-intro h3 { font-weight: 600; font-size: 22px; line-height: 1.4; margin-bottom: 10px; }
+.contact-intro .text { color: var(--text-muted); max-width: 520px; }
+.contact-list { border-top: 1px solid var(--line); margin-top: 40px; }
+.contact-list li { border-bottom: 1px solid var(--line); }
+.contact-list a { display: flex; align-items: center; gap: 16px; padding: 14px 4px; text-decoration: none; }
+.contact-icon {
+  width: 40px; height: 40px; display: grid; place-items: center; flex-shrink: 0;
+  background: var(--surface); border: 1px solid var(--line); color: var(--text);
+}
+.contact-icon .icon { width: 18px; height: 18px; }
+.contact-text { display: flex; flex-direction: column; min-width: 0; word-break: break-all; line-height: 1.5; }
+.contact-text small { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.contact-go { margin-left: auto; color: var(--line-strong); display: flex; }
+.contact-go .icon { width: 14px; height: 14px; }
+.contact-list a:hover { color: var(--primary); }
+.contact-list a:hover .contact-icon { border-color: var(--primary); color: var(--primary); }
+.contact-list a:hover .contact-go { color: var(--primary); }
+
+.footer { margin-top: 128px; padding: 28px 0 40px; border-top: 1px solid var(--line); font-size: 13px; color: var(--text-muted); }
+
+/* back-to-top: only needed on phones (big screens have the sidebar menu) */
+.to-top {
+  position: fixed; right: 16px; bottom: 16px; z-index: 20; display: none;
+  opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s;
+}
+.btn.to-top { background: var(--bg); }
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+/* ---------- Top bar for phones/tablets (hidden on big screens: the sidebar menu is always there) ---------- */
+.mobile-bar { display: none; }
+
+/* ---------- Tablet / phone: one column ---------- */
+@media (max-width: 1000px) {
+  html { scroll-padding-top: 76px; } /* menu links stop just below the top bar */
+  .bg-swirls { height: 460px; } /* behind the photo, name and intro */
+  .layout { grid-template-columns: 1fr; gap: 0; padding: 0 24px; }
+  .side { position: static; min-height: 0; padding: 40px 0 0; }
+  .side-nav { display: none; } /* the top bar has the menu instead */
+  .side-intro { max-width: 560px; }
+  .player { max-width: none; }
+  .side-player { margin-top: 32px; }
+  .side-photo { width: 72px; height: 72px; }
+  /* stacked: the divider becomes a line across, between the top part and the content (fading at both ends) */
+  .side { border-right: 0; border-image: none; }
+  .content {
+    padding: 64px 0 0; margin-top: 48px; border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--line-strong) 18%, var(--line-strong) 82%, transparent) 1;
+  }
+  .section + .section { margin-top: 96px; }
+  .to-top { display: inline-flex; }
+
+  /* the top bar: my name (back to the top) + "Menu"; it sticks to the top of the screen */
+  .mobile-bar {
+    display: block; position: sticky; top: 0; z-index: 40;
+    background: rgba(17, 19, 24, 0.9); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-bar-row { height: 56px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .mobile-name { font-family: var(--font-pixel); font-size: 12px; line-height: 1; text-transform: uppercase; color: var(--primary); text-decoration: none; }
+  .mobile-menu-btn {
+    display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 12px; cursor: pointer;
+    background: none; border: 1px solid var(--line-strong); color: var(--text);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .mobile-menu-btn .icon { width: 14px; height: 14px; }
+  .mobile-menu-btn:hover, .mobile-bar.open .mobile-menu-btn { color: var(--primary); border-color: var(--primary); }
+  /* the list that opens under the bar: same look as the sidebar menu (red line = the part you're reading) */
+  .mobile-menu { display: flex; flex-direction: column; align-items: flex-start; padding: 6px 24px 18px; border-top: 1px solid var(--line); }
+  .mobile-menu[hidden] { display: none; }
+  .mobile-menu a {
+    display: flex; align-items: center; gap: 16px; width: 100%; padding: 12px 0;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+  }
+  .mobile-menu a::before { content: ''; width: 24px; height: 1px; background: var(--line-strong); }
+  .mobile-menu a:hover, .mobile-menu a.on { color: var(--text); }
+  .mobile-menu a.on::before { width: 48px; height: 2px; background: var(--primary); }
+}
+
+/* tablets: intro on the left, player on the right (instead of one long column) */
+@media (min-width: 700px) and (max-width: 1000px) {
+  .side { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); column-gap: 40px; align-items: start; }
+  .side > * { grid-column: 1; }
+  .side-lang { grid-column: 1 / -1; }
+  .side .side-player { grid-column: 2; grid-row: 2 / span 4; align-self: center; margin-top: 0; }
+  .side-foot { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .layout { padding: 0 20px; }
+  .mobile-bar-row { padding: 0 20px; }
+  .mobile-menu { padding: 6px 20px 18px; }
+  .side-name { font-size: 24px; }
+  .section-title { font-size: 17px; gap: 12px; margin-bottom: 28px; }
+  .section-title::before { width: 20px; }
+  .timeline-item, .project-card { grid-template-columns: 1fr; gap: 6px; }
+  .project-card > :not(.project-thumb, .thumb-btn) { grid-column: 1; }
+  .project-card > .project-thumb, .project-card > .thumb-btn { grid-row: auto; margin-bottom: 12px; }
+  /* "Coming soon" projects: a small picture next to the text instead of a big empty box */
+  .project-card.soon { grid-template-columns: 88px minmax(0, 1fr); gap: 2px 16px; }
+  .project-card.soon > :not(.project-thumb, .thumb-btn) { grid-column: 2; }
+  .project-card.soon > .project-thumb { grid-row: 1 / span 6; margin-bottom: 0; }
+  .project-card.soon .project-thumb.placeholder .icon { width: 20px; height: 20px; }
+  .timeline-when { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .logo-group { padding: 4px 20px; }
+  /* floating player on phones: phones have their own volume buttons, so no volume slider */
+  .player.floating { bottom: 10px; width: calc(100% - 20px); padding: 8px; gap: 8px 10px; }
+  .player.floating .player-volume { display: none; }
+  .player .player-close { top: -10px; right: -4px; } /* stays inside the screen edge */
+  .with-floating-player .footer { padding-bottom: 130px; }
+  .with-floating-player .btn.to-top { bottom: 124px; } /* above the floating player and its X */
+  /* on phones the app fills the whole screen (no phone shape) */
+  .app-modal { width: 100%; height: 100%; margin: 0; gap: 0; }
+  .app-modal-phone { width: 100%; height: 100%; padding: 0; border: 0; border-radius: 0; }
+  .app-modal-phone iframe { border-radius: 0; }
+  .app-modal-browser { width: 100%; height: 100%; border: 0; }
+  .app-modal-bar { display: none; }
+  .app-modal-close { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); background: var(--bg); }
+  .zoom-stage { gap: 8px; }
+  .zoom-stage img { height: auto; max-height: 80vh; max-width: calc(100vw - 104px); border-radius: 18px; }
+  .zoom.wide .zoom-stage img { width: calc(100vw - 104px); border-radius: 0; }
+}
+
+/* the corner badge on a project picture that can be opened big */
+.thumb-btn { position: relative; }
+.zoom-badge {
+  position: absolute; right: 6px; bottom: 6px; width: 24px; height: 24px; display: grid; place-items: center;
+  color: #fff; background: rgba(17, 19, 24, 0.85); border: 1px solid var(--line-strong); transition: border-color 0.15s, color 0.15s;
+}
+.thumb-btn:hover .zoom-badge { color: var(--primary); border-color: var(--primary); }
+/* inside "Read more": the school/date line first, the tags last */
+.project-details .meta { margin: 0; }
+
+/* the tags under each job: quieter outline instead of coloured pills, so the timeline reads calmer */
+.job-tags li { background: transparent; border: 1px solid var(--line-strong); color: var(--text-muted); }
