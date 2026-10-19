@@ -33,7 +33,7 @@ export const content = {
       more: 'Læs mere',
       less: 'Vis mindre',
       paragraphs: [
-        'Jeg hedder Amir, er 26 år og bor i Kolding. Jeg er uddannet webudvikler og multimediedesigner, og lige nu læser jeg Cand.it i Web Communication & Design på SDU.',
+        'Jeg hedder Amir, er 26 år og bor i Kolding. Jeg er uddannet webudvikler, har også en uddannelse som multimediedesigner, og lige nu læser jeg Cand.it i Web Communication & Design på SDU.',
         'Jeg kan lide at bygge løsninger, der er nemme og rare at bruge. Jeg arbejder med HTML, CSS og JavaScript og kender frameworks som React og Vue godt. Med min baggrund i design går jeg lige så meget op i, hvordan tingene ser ud, som hvordan de virker – en baggrund, jeg har designet i Photoshop, er endda blevet brugt af YouTuberen "danooct1".',
         'Mine forældre er fra Bosnien, men jeg er født og opvokset i Danmark. Jeg er meget teknisk anlagt og føler mig hjemme bag en computer, og når en kollega støder på et teknisk problem, hjælper jeg gerne med at finde en løsning. Mit mål er at arbejde som frontend-udvikler.',
         'Chiptune er en af mine største hobbyer: musik lavet med lydchippene fra gamle konsoller som NES og Game Boy. Jeg laver mine egne 8-bit numre, og du kan høre dem i afspilleren her på siden – det er også derfor, hele siden har et 8-bit look. For nylig fik jeg endelig fat i en rigtig NES. Nu mangler jeg bare nogle spil til den, så indtil videre ser den mest godt ud på hylden.',
@@ -51,7 +51,7 @@ export const content = {
       more: 'Read more',
       less: 'Show less',
       paragraphs: [
-        'I’m Amir, I’m 26 and I live in Kolding. I’m a trained web developer and multimedia designer, and right now I’m studying for a master’s (Cand.it) in Web Communication & Design at SDU.',
+        'I’m Amir, I’m 26 and I live in Kolding. I’m a trained web developer, I also have an education as a multimedia designer, and right now I’m studying for a master’s (Cand.it) in Web Communication & Design at SDU.',
         'I like building things that are easy and pleasant to use. I work with HTML, CSS and JavaScript and know my way around frameworks like React and Vue. With my background in design, I care just as much about how things look as how they work – a background I designed in Photoshop was even used by the YouTuber "danooct1".',
         'My parents are from Bosnia, but I was born and raised in Denmark. I’m very tech-savvy and feel right at home behind a computer, and when a colleague runs into a technical problem, I’m always happy to help find a solution. My goal is to work as a frontend developer.',
         'Chiptune is one of my biggest hobbies: music made with the sound chips of old consoles like the NES and the Game Boy. I make my own 8-bit tracks, and you can listen to them in the player on this page – that’s also why the whole site has an 8-bit look. I recently got my hands on a real NES. Now I just need some games for it, so for now it mostly looks great on the shelf.',
