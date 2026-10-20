@@ -106,7 +106,7 @@ export default function ChiptunePlayer({ lang, floating = false }) {
           onPointerUp={() => (p.seeking.current = false)}
           onChange={(e) => p.seek(Number(e.target.value))}
         />
-        <span>{p.length ? clock(p.length) : '–:––'}</span>
+        <span>{p.length ? clock(p.length) : '-:--'}</span>
       </div>
 
       {/* mute + volume */}

@@ -34,10 +34,10 @@ export const content = {
       less: 'Vis mindre',
       paragraphs: [
         'Jeg hedder Amir, er 26 år og bor i Kolding. Jeg er uddannet webudvikler, har også en uddannelse som multimediedesigner, og lige nu læser jeg Cand.it i Web Communication & Design på SDU.',
-        'Jeg kan lide at bygge løsninger, der er nemme og rare at bruge. Jeg arbejder med HTML, CSS og JavaScript og kender frameworks som React og Vue godt. Med min baggrund i design går jeg lige så meget op i, hvordan tingene ser ud, som hvordan de virker – en baggrund, jeg har designet i Photoshop, er endda blevet brugt af YouTuberen "danooct1".',
+        'Jeg kan lide at bygge løsninger, der er nemme og rare at bruge. Jeg arbejder med HTML, CSS og JavaScript og kender frameworks som React og Vue godt. Med min baggrund i design går jeg lige så meget op i, hvordan tingene ser ud, som hvordan de virker. Sjov detalje: en baggrund, jeg har lavet i Photoshop, er faktisk blevet brugt af YouTuberen "danooct1".',
         'Mine forældre er fra Bosnien, men jeg er født og opvokset i Danmark. Jeg er meget teknisk anlagt og føler mig hjemme bag en computer, og når en kollega støder på et teknisk problem, hjælper jeg gerne med at finde en løsning. Mit mål er at arbejde som frontend-udvikler.',
-        'Chiptune er en af mine største hobbyer: musik lavet med lydchippene fra gamle konsoller som NES og Game Boy. Jeg laver mine egne 8-bit numre, og du kan høre dem i afspilleren her på siden – det er også derfor, hele siden har et 8-bit look. For nylig fik jeg endelig fat i en rigtig NES. Nu mangler jeg bare nogle spil til den, så indtil videre ser den mest godt ud på hylden.',
-        'Jeg elsker også gaming, især konkurrenceprægede spil. Jeg går altid efter at være den bedste spiller på serveren. Det lykkes ikke hver gang, men jeg giver den alt, hvad jeg har – og den samme gejst tager jeg med ind i mit arbejde.',
+        'Chiptune er en af mine største hobbyer: musik, der lyder som lydchippene i gamle spillekonsoller. Jeg laver autentisk chiptune, der er kompatibel med den rigtige hardware. Du kan høre mine numre i afspilleren her på siden, og ja, det er også derfor, hele siden har et 8-bit look. For nylig fik jeg endelig fat i en rigtig NES. Nu mangler jeg bare nogle spil til den, så indtil videre ser den mest godt ud på hylden.',
+        'Jeg elsker også gaming, især konkurrenceprægede spil. Jeg går altid efter at være den bedste spiller på serveren. Det lykkes ikke hver gang, men jeg giver den alt, hvad jeg har. Og den samme gejst tager jeg med ind i mit arbejde.',
       ],
       stats: [
         ['Alder', '26'],
@@ -52,10 +52,10 @@ export const content = {
       less: 'Show less',
       paragraphs: [
         'I’m Amir, I’m 26 and I live in Kolding. I’m a trained web developer, I also have an education as a multimedia designer, and right now I’m studying for a master’s (Cand.it) in Web Communication & Design at SDU.',
-        'I like building things that are easy and pleasant to use. I work with HTML, CSS and JavaScript and know my way around frameworks like React and Vue. With my background in design, I care just as much about how things look as how they work – a background I designed in Photoshop was even used by the YouTuber "danooct1".',
+        'I like building things that are easy and pleasant to use. I work with HTML, CSS and JavaScript and know my way around frameworks like React and Vue. With my background in design, I care just as much about how things look as how they work. Fun fact: a background I made in Photoshop was actually used by the YouTuber "danooct1".',
         'My parents are from Bosnia, but I was born and raised in Denmark. I’m very tech-savvy and feel right at home behind a computer, and when a colleague runs into a technical problem, I’m always happy to help find a solution. My goal is to work as a frontend developer.',
-        'Chiptune is one of my biggest hobbies: music made with the sound chips of old consoles like the NES and the Game Boy. I make my own 8-bit tracks, and you can listen to them in the player on this page – that’s also why the whole site has an 8-bit look. I recently got my hands on a real NES. Now I just need some games for it, so for now it mostly looks great on the shelf.',
-        'I also love gaming, especially competitive games. I always aim to be the best player on the server. It doesn’t happen every time, but I give it everything I’ve got – and I bring that same drive to my work.',
+        'Chiptune is one of my biggest hobbies: music that sounds like the sound chips in old game consoles. I create authentic, hardware-compatible chiptunes. You can listen to my tracks in the player on this page, and yes, that’s also why the whole site has an 8-bit look. I recently got my hands on a real NES. Now I just need some games for it, so for now it mostly looks great on the shelf.',
+        'I also love gaming, especially competitive games. I always aim to be the best player on the server. It doesn’t happen every time, but I give it everything I’ve got. And I bring that same energy to my work.',
       ],
       stats: [
         ['Age', '26'],
@@ -88,7 +88,7 @@ export const content = {
     items: [
       {
         company: 'BestofOnline / LokalNyt',
-        period: { da: 'Okt – Dec 2024', en: 'Oct – Dec 2024' },
+        period: { da: 'Okt - Dec 2024', en: 'Oct - Dec 2024' },
         role: { da: 'Praktikant', en: 'Intern' },
         place: 'Middelfart',
         points: ['Gutenberg React blocks', { da: 'Grafisk design (ad hoc)', en: 'Graphic design (ad hoc)' }, 'WordPress, Divi, Elementor'],
@@ -96,7 +96,7 @@ export const content = {
       },
       {
         company: 'StepUp Media',
-        period: { da: 'Maj – Jun 2024', en: 'May – Jun 2024' },
+        period: { da: 'Maj - Jun 2024', en: 'May - Jun 2024' },
         role: { da: 'Praktikant', en: 'Intern' },
         place: 'Kolding',
         points: ['PHP WordPress', 'Advanced Custom Fields', 'Formidable', 'Gutenberg Blocks', 'HTML, CSS (SASS), JavaScript'],
@@ -104,7 +104,7 @@ export const content = {
       },
       {
         company: 'Wetap',
-        period: 'Aug – Nov 2023',
+        period: 'Aug - Nov 2023',
         role: { da: 'Praktikant', en: 'Intern' },
         place: 'Kolding',
         points: ['SEO (Mangools)', 'WooCommerce', 'Photoshop, Blender, DaVinci Resolve', { da: 'Vedligeholdelse af WordPress webshop', en: 'Maintaining a WordPress webshop' }],
@@ -112,7 +112,7 @@ export const content = {
       },
       {
         company: 'GoHosting',
-        period: { da: 'Feb – Maj 2022', en: 'Feb – May 2022' },
+        period: { da: 'Feb - Maj 2022', en: 'Feb - May 2022' },
         role: { da: 'Praktikant', en: 'Intern' },
         place: 'Kolding',
         points: ['Adobe XD', { da: 'Salgsbrochure (grafisk design)', en: 'Sales brochure (graphic design)' }, 'Photoshop, Illustrator'],
@@ -120,7 +120,7 @@ export const content = {
       },
       {
         company: 'Netto, Salling Group',
-        period: 'Mar – Nov 2017',
+        period: 'Mar - Nov 2017',
         role: { da: 'Butiksmedarbejder', en: 'Store assistant' },
         place: 'Rønne',
         points: [{ da: 'Kundebetjening', en: 'Customer service' }, 'Trimming', { da: 'Rengøring', en: 'Cleaning' }],
@@ -132,10 +132,10 @@ export const content = {
     da: { title: 'Uddannelse', now: 'I gang' },
     en: { title: 'Education', now: 'In progress' },
     items: [
-      { school: 'SDU Syddansk Universitet, Kolding', name: 'Cand.it Web Communication & Design', years: '2025 – 2027', current: true },
-      { school: 'IBA Erhvervsakademi Kolding', name: { da: 'Webudvikling', en: 'Web development' }, years: '2022 – 2024' },
-      { school: 'IBA Erhvervsakademi Kolding', name: { da: 'Multimediedesigner', en: 'Multimedia designer' }, years: '2020 – 2022' },
-      { school: 'Campus Bornholm, HTX', name: 'Computer science', years: '2017 – 2020' },
+      { school: 'SDU Syddansk Universitet, Kolding', name: 'Cand.it Web Communication & Design', years: '2025 - 2027', current: true },
+      { school: 'IBA Erhvervsakademi Kolding', name: { da: 'Webudvikling', en: 'Web development' }, years: '2022 - 2024' },
+      { school: 'IBA Erhvervsakademi Kolding', name: { da: 'Multimediedesigner', en: 'Multimedia designer' }, years: '2020 - 2022' },
+      { school: 'Campus Bornholm, HTX', name: 'Computer science', years: '2017 - 2020' },
     ],
   },
 
@@ -149,8 +149,8 @@ export const content = {
         award: { da: 'Vinder · bedste hjemmeside', en: 'Winner · best website' },
         meta: { da: 'IBA Erhvervsakademi Kolding · 1. semester', en: 'IBA Erhvervsakademi Kolding · 1st semester' },
         text: {
-          da: 'Vores gruppe vandt prisen for bedste hjemmeside, da vores klasse lavede en ny side til Kolding Festival – bygget fra bunden i tæt samarbejde med festivalen.',
-          en: 'Our group won best website when our class made a new site for Kolding Festival – built from scratch, together with the festival.',
+          da: 'Vores gruppe vandt prisen for bedste hjemmeside, da vores klasse lavede en ny side til Kolding Festival. Vi byggede den fra bunden sammen med festivalen.',
+          en: 'Our group won best website when our class made a new site for Kolding Festival. We built it from scratch, working closely with the festival.',
         },
         tags: ['Vue 3', 'Vite', 'Tailwind CSS', 'Node'],
         site: 'https://www.koldfestival.dk/',
@@ -173,7 +173,7 @@ export const content = {
       {
         name: 'Webshop Builder',
         label: { da: 'Bachelorprojekt · 2023', en: 'Bachelor project · 2023' },
-        meta: { da: 'IBA Erhvervsakademi Kolding · Webudvikling · nov.–dec. 2023', en: 'IBA Erhvervsakademi Kolding · Web development · Nov–Dec 2023' },
+        meta: { da: 'IBA Erhvervsakademi Kolding · Webudvikling · nov.-dec. 2023', en: 'IBA Erhvervsakademi Kolding · Web development · Nov-Dec 2023' },
         text: {
           da: 'Mit bachelorprojekt: byg dine egne webshops med produkter, kategorier, kurv og checkout.',
           en: 'My bachelor project: build your own webshops with products, categories, a cart and a checkout.',
@@ -195,15 +195,15 @@ export const content = {
           {
             title: { da: 'Om projektet', en: 'About the project' },
             text: {
-              da: 'Mit bachelorprojekt i webudvikling: et lille CMS, hvor man opretter en konto og bygger sine egne webshops – med navn, beskrivelse, farve og bannerbillede, produkter med billeder og priser, og kategorier. Hver webshop får sin egen offentlige side med kategorifilter, sortering efter pris, produktsider, kurv og checkout.',
-              en: 'My bachelor project in web development: a small CMS where you create an account and build your own webshops – with a name, description, colour and banner image, products with pictures and prices, and categories. Every webshop gets its own public page with a category filter, sorting by price, product pages, a cart and a checkout.',
+              da: 'Mit bachelorprojekt i webudvikling: et lille CMS, hvor man opretter en konto og bygger sine egne webshops med navn, beskrivelse, farve og bannerbillede, produkter med billeder og priser, og kategorier. Hver webshop får sin egen offentlige side med kategorifilter, sortering efter pris, produktsider, kurv og checkout.',
+              en: 'My bachelor project in web development: a small CMS where you create an account and build your own webshops, with a name, description, colour and banner image, products with pictures and prices, and categories. Every webshop gets its own public page with a category filter, sorting by price, product pages, a cart and a checkout.',
             },
           },
           {
             title: { da: 'Det kan man', en: 'What you can do' },
             list: [
               { da: 'Oprette en konto og logge ind. Formularerne tjekkes med React Hook Form, kodeord gemmes som bcrypt-hash, og man bliver logget ud efter 20 minutter uden aktivitet.', en: 'Create an account and log in. The forms are checked with React Hook Form, passwords are stored as bcrypt hashes, and you are logged out after 20 minutes without activity.' },
-              { da: 'Dashboard: se sine webshops (navn, beskrivelse, farve, antal produkter og dato), oprette nye, redigere og slette dem – og slette sin bruger, som også fjerner alle ens webshops og produkter.', en: 'Dashboard: see your webshops (name, description, colour, number of products and date), create new ones, edit and delete them – and delete your user, which also removes all your webshops and products.' },
+              { da: 'Dashboard: se sine webshops (navn, beskrivelse, farve, antal produkter og dato), oprette nye, redigere og slette dem. Man kan også slette sin bruger, som også fjerner alle ens webshops og produkter.', en: 'Dashboard: see your webshops (name, description, colour, number of products and date), create new ones, edit and delete them. You can also delete your user, which also removes all your webshops and products.' },
               { da: 'Oprette en webshop med bannerbillede, som uploades til Cloudinary. Navnet skal være unikt, fordi det også er webshoppens adresse.', en: 'Create a webshop with a banner image that is uploaded to Cloudinary. The name must be unique, because it is also the webshop’s address.' },
               { da: 'Redigeringssiden: ændre oplysninger og banner, tilføje, redigere og slette produkter, og lave kategorier ved at sætte flueben ved produkterne.', en: 'The edit page: change the details and banner, add, edit and delete products, and make categories by ticking the products.' },
               { da: 'Den offentlige webshop: banner, "Om os", kategorier, sortering efter pris, produktsider med serienummer, "Læg i kurv" / "Køb nu" og en checkout med antal, fjern-knap og samlet pris. Ejeren ser en admin-bjælke øverst.', en: 'The public webshop: banner, "About us", categories, sorting by price, product pages with a serial number, "Add to cart" / "Buy now" and a checkout with quantities, a remove button and the total price. The owner sees an admin bar at the top.' },
@@ -215,26 +215,26 @@ export const content = {
               { da: 'Frontend: React 18 med Vite, React Router, Axios og React Hook Form. Hver komponent har sin egen CSS-fil.', en: 'Frontend: React 18 with Vite, React Router, Axios and React Hook Form. Every component has its own CSS file.' },
               { da: 'Backend: et REST API i Node.js og Express med 17 routes til login, webshops, kategorier og produkter, og et middleware, der tjekker om man er logget ind.', en: 'Backend: a REST API in Node.js and Express with 17 routes for login, webshops, categories and products, plus a middleware that checks that you are logged in.' },
               { da: 'Database: MongoDB med Mongoose (brugere, webshops med kategorier indeni, og produkter). Login-sessionen gemmes også i MongoDB med express-session og connect-mongo.', en: 'Database: MongoDB with Mongoose (users, webshops with their categories inside, and products). The login session is also stored in MongoDB with express-session and connect-mongo.' },
-              { da: 'Billeder uploades direkte fra browseren til Cloudinary – kun linket gemmes i databasen.', en: 'Pictures are uploaded straight from the browser to Cloudinary – only the link is saved in the database.' },
+              { da: 'Billeder uploades direkte fra browseren til Cloudinary, og kun linket gemmes i databasen.', en: 'Pictures are uploaded straight from the browser to Cloudinary, and only the link is saved in the database.' },
               { da: 'Klient og server blev lagt online hver for sig. Login-cookien sendes mellem to domæner, og derfor skal det køre over HTTPS (det står også i README’en).', en: 'The client and the server were put online separately. The login cookie is sent between two domains, which is why it must run over HTTPS (the README says so too).' },
             ],
           },
           {
             title: { da: 'Forløbet (fra commit-historikken)', en: 'How it went (from the commit history)' },
             list: [
-              { da: '14.–16. nov.: projektet sat op, fejlhåndtering, validering af formularer og en 404-side.', en: '14–16 Nov: project set up, error handling, form validation and a 404 page.' },
-              { da: '18.–22. nov.: forbindelse til databasen, loading-spinnere og den første version af "opret webshop".', en: '18–22 Nov: connection to the database, loading spinners and the first version of "create a webshop".' },
+              { da: '14.-16. nov.: projektet sat op, fejlhåndtering, validering af formularer og en 404-side.', en: '14-16 Nov: project set up, error handling, form validation and a 404 page.' },
+              { da: '18.-22. nov.: forbindelse til databasen, loading-spinnere og den første version af "opret webshop".', en: '18-22 Nov: connection to the database, loading spinners and the first version of "create a webshop".' },
               { da: '30. nov.: hver webshop får sin egen adresse.', en: '30 Nov: every webshop gets its own address.' },
-              { da: '3.–5. dec.: slet webshop, upload af bannerbillede og design af webshop-siderne.', en: '3–5 Dec: deleting webshops, banner image upload and the design of the webshop pages.' },
-              { da: '7.–11. dec.: produkter, kategorier, sortering, produktsiden, kurven og checkout.', en: '7–11 Dec: products, categories, sorting, the product page, the cart and the checkout.' },
-              { da: '12.–14. dec.: redigering af produkter, serveren delt op i routes, models og middleware, bedre fejl for webshops og produkter, der ikke findes, README og de sidste UX-rettelser.', en: '12–14 Dec: editing products, the server split into routes, models and middleware, better errors for webshops and products that don’t exist, the README and the last UX tweaks.' },
+              { da: '3.-5. dec.: slet webshop, upload af bannerbillede og design af webshop-siderne.', en: '3-5 Dec: deleting webshops, banner image upload and the design of the webshop pages.' },
+              { da: '7.-11. dec.: produkter, kategorier, sortering, produktsiden, kurven og checkout.', en: '7-11 Dec: products, categories, sorting, the product page, the cart and the checkout.' },
+              { da: '12.-14. dec.: redigering af produkter, serveren delt op i routes, models og middleware, bedre fejl for webshops og produkter, der ikke findes, README og de sidste UX-rettelser.', en: '12-14 Dec: editing products, the server split into routes, models and middleware, better errors for webshops and products that don’t exist, the README and the last UX tweaks.' },
             ],
           },
           {
             title: { da: 'Ikke færdigt', en: 'Not finished' },
             list: [
-              { da: 'Siden er bygget til computer og fungerer ikke godt på mobil – det nåede jeg ikke på grund af tidspres.', en: 'The site is built for desktop and doesn’t work well on mobile – I didn’t get to it because of time constraints.' },
-              { da: 'Man kan ikke redigere en kategori – knappen er der, men funktionen nåede jeg ikke.', en: 'You can’t edit a category – the button is there, but I didn’t get to the feature.' },
+              { da: 'Siden er bygget til computer og fungerer ikke så godt på mobil. Det nåede jeg desværre ikke, fordi tiden løb fra mig.', en: 'The site is built for desktop and doesn’t work that well on mobile. I just ran out of time to fix it.' },
+              { da: 'Man kan ikke redigere en kategori. Knappen er der, men selve funktionen nåede jeg ikke.', en: 'You can’t edit a category. The button is there, but I didn’t get around to building it.' },
               { da: 'Billeder bliver ikke slettet fra Cloudinary, når en webshop eller et produkt slettes.', en: 'Pictures are not deleted from Cloudinary when a webshop or a product is deleted.' },
               { da: 'Checkout viser kurven og prisen, men der er ingen rigtig betaling.', en: 'The checkout shows the cart and the price, but there is no real payment.' },
             ],
@@ -253,8 +253,8 @@ export const content = {
         label: { da: 'Frit valgt projekt · 2023', en: 'Free-choice project · 2023' },
         meta: { da: 'IBA Erhvervsakademi Kolding · Webudvikling · maj 2023', en: 'IBA Erhvervsakademi Kolding · Web development · May 2023' },
         text: {
-          da: 'En Twitter-klon med tweets, billeder, likes og kommentarer, der opdateres live – min første app med React og Firebase.',
-          en: 'A Twitter clone with tweets, pictures, likes and comments that update live – my first React + Firebase app.',
+          da: 'En Twitter-klon med tweets, billeder, likes og kommentarer, der opdateres live. Min første app med React og Firebase!',
+          en: 'A Twitter clone with tweets, pictures, likes and comments that update live. My very first React + Firebase app!',
         },
         tags: ['React', 'Firebase', 'Firestore', 'Tailwind CSS', 'React Router'],
         app: 'twitter',
@@ -271,8 +271,8 @@ export const content = {
           {
             title: { da: 'Om projektet', en: 'About the project' },
             text: {
-              da: 'I et projekt, hvor vi selv måtte vælge, lavede jeg en Twitter-klon for at lære React og Firebase, som jeg aldrig havde brugt før. Man kan oprette en konto, poste tweets med eller uden billede, like, kommentere, se andres profiler og skifte profilbillede – og alt opdateres live uden at genindlæse siden.',
-              en: 'In a project where we could choose anything, I made a Twitter clone to learn React and Firebase, which I had never used before. You can create an account, post tweets with or without a picture, like, comment, look at other people’s profiles and change your profile picture – and everything updates live without reloading the page.',
+              da: 'I et projekt, hvor vi selv måtte vælge, lavede jeg en Twitter-klon for at lære React og Firebase, som jeg aldrig havde brugt før. Man kan oprette en konto, poste tweets med eller uden billede, like, kommentere, se andres profiler og skifte profilbillede. Og alt opdateres live uden at genindlæse siden.',
+              en: 'In a project where we could choose anything, I made a Twitter clone to learn React and Firebase, which I had never used before. You can create an account, post tweets with or without a picture, like, comment, look at other people’s profiles and change your profile picture. And everything updates live without reloading the page.',
             },
           },
           {
@@ -284,7 +284,7 @@ export const content = {
             list: [
               { da: 'Oprette en konto og logge ind med e-mail og kodeord (Firebase Authentication). Siderne er beskyttet, så man kun ser feedet, når man er logget ind.', en: 'Create an account and log in with e-mail and password (Firebase Authentication). The pages are protected, so you only see the feed when you are logged in.' },
               { da: 'Poste tweets på op til 280 tegn, med eller uden billede (gemt i Firebase Storage). Datoen skrives på dansk.', en: 'Post tweets of up to 280 characters, with or without a picture (stored in Firebase Storage). The date is written in Danish.' },
-              { da: 'Like og fjerne like (hjertet bliver rødt), skrive kommentarer og slette sine egne tweets – billedet slettes også fra Storage.', en: 'Like and unlike (the heart turns red), write comments and delete your own tweets – the picture is deleted from Storage too.' },
+              { da: 'Like og fjerne like (hjertet bliver rødt), skrive kommentarer og slette sine egne tweets (så bliver billedet også slettet fra Storage).', en: 'Like and unlike (the heart turns red), write comments and delete your own tweets (the picture gets deleted from Storage too).' },
               { da: 'Klikke på et profilbillede og se alle tweets fra den bruger.', en: 'Click a profile picture to see all tweets from that user.' },
               { da: 'Indstillinger: nyt profilbillede (også på ens gamle tweets), e-mail til at nulstille kodeord, slette kontoen (med ens tweets og likes) og logge ud.', en: 'Settings: a new profile picture (also on your old tweets), an e-mail to reset your password, deleting your account (with your tweets and likes) and signing out.' },
               { da: 'Feedet opdateres live med Firestores onSnapshot, så nye tweets, likes og kommentarer dukker op med det samme.', en: 'The feed updates live with Firestore’s onSnapshot, so new tweets, likes and comments show up right away.' },
@@ -301,15 +301,15 @@ export const content = {
           {
             title: { da: 'Forløbet (fra commit-historikken)', en: 'How it went (from the commit history)' },
             list: [
-              { da: '10.–13. maj: projektet sat op, login og oprettelse virker, beskyttede sider og et standard-profilbillede.', en: '10–13 May: project set up, login and sign-up working, protected pages and a default profile picture.' },
+              { da: '10.-13. maj: projektet sat op, login og oprettelse virker, beskyttede sider og et standard-profilbillede.', en: '10-13 May: project set up, login and sign-up working, protected pages and a default profile picture.' },
               { da: '17. maj: man kan skifte profilbillede.', en: '17 May: you can change your profile picture.' },
-              { da: '19.–22. maj: designet af et tweet, og så at poste tweets med billeder.', en: '19–22 May: the design of a tweet, and then posting tweets with pictures.' },
-              { da: '23.–24. maj: kommentarer og likes (en af de commits blev lavet klokken næsten 6 om morgenen).', en: '23–24 May: comments and likes (one of those commits was made at almost 6 in the morning).' },
-              { da: '25.–26. maj: brugersider, oprydning og README.', en: '25–26 May: user pages, clean-up and the README.' },
+              { da: '19.-22. maj: designet af et tweet, og så at poste tweets med billeder.', en: '19-22 May: the design of a tweet, and then posting tweets with pictures.' },
+              { da: '23.-24. maj: kommentarer og likes (en af de commits blev lavet klokken næsten 6 om morgenen).', en: '23-24 May: comments and likes (one of those commits was made at almost 6 in the morning).' },
+              { da: '25.-26. maj: brugersider, oprydning og README.', en: '25-26 May: user pages, clean-up and the README.' },
             ],
           },
           {
-            title: { da: 'Det lærte jeg – og det nåede jeg ikke', en: 'What I learned – and what I didn’t finish' },
+            title: { da: 'Det lærte jeg, og det nåede jeg ikke', en: 'What I learned, and what I didn’t finish' },
             text: { da: 'Jeg lærte grundlaget i React og Firebase. Den største lektie var at planlægge databasen først: min struktur passede ikke til en NoSQL-database som Firestore. Derfor nåede jeg ikke (det står også i README’en): at følge andre brugere, at slette kommentarer, at gøre noget, når man klikker på en kommentar, og at slette en brugers kommentarer, når kontoen slettes. Søgefeltet er kun design.', en: 'I learned the basics of React and Firebase. The biggest lesson was to plan the database first: my structure didn’t fit a NoSQL database like Firestore. Because of that I didn’t get to (the README says so too): following other users, deleting comments, doing something when you click a comment, and deleting a user’s comments when the account is deleted. The search field is only design.' },
           },
           {
@@ -326,8 +326,8 @@ export const content = {
         label: { da: '2. semester · 2023', en: '2nd semester · 2023' },
         meta: { da: 'IBA Erhvervsakademi Kolding · Webudvikling · marts 2023', en: 'IBA Erhvervsakademi Kolding · Web development · March 2023' },
         text: {
-          da: 'Lav quizzer, tag andres og få din score – en app med Express og MongoDB, lavet på fem dage.',
-          en: 'Make quizzes, take other people’s and get your score – an Express + MongoDB app made in five days.',
+          da: 'Lav quizzer, tag andres og få din score. En app med Express og MongoDB, som jeg lavede på fem dage.',
+          en: 'Make quizzes, take other people’s and get your score. An Express + MongoDB app I made in just five days.',
         },
         tags: ['Node.js', 'Express', 'Handlebars', 'MongoDB', 'Pico CSS'],
         app: 'quiz',
@@ -345,8 +345,8 @@ export const content = {
           {
             title: { da: 'Om projektet', en: 'About the project' },
             text: {
-              da: 'Et projekt på 2. semester: en quiz-app, hvor man opretter en bruger, laver sine egne quizzer med tre spørgsmål og tager andres – og får sin score i procent. Alt sker på serveren: Express bygger siderne med Handlebars, og brugere og quizzer gemmes i MongoDB. Lavet på fem dage.',
-              en: 'A 2nd-semester project: a quiz app where you create a user, make your own quizzes with three questions and take other people’s – and get your score in percent. Everything happens on the server: Express builds the pages with Handlebars, and users and quizzes are saved in MongoDB. Made in five days.',
+              da: 'Et projekt på 2. semester: en quiz-app, hvor man opretter en bruger, laver sine egne quizzer med tre spørgsmål og tager andres og får sin score i procent. Alt sker på serveren: Express bygger siderne med Handlebars, og brugere og quizzer gemmes i MongoDB. Lavet på fem dage.',
+              en: 'A 2nd-semester project: a quiz app where you create a user, make your own quizzes with three questions and take other people’s, and get your score in percent. Everything happens on the server: Express builds the pages with Handlebars, and users and quizzes are saved in MongoDB. Made in five days.',
             },
           },
           {
@@ -356,7 +356,7 @@ export const content = {
           {
             title: { da: 'Det kan man', en: 'What you can do' },
             list: [
-              { da: 'Oprette en bruger og logge ind. Kodeord gemmes med bcrypt (hash + salt), og en session med express-session holder dig logget ind – den udløber efter 3 minutter uden klik.', en: 'Create a user and log in. Passwords are saved with bcrypt (hash + salt), and a session with express-session keeps you logged in – it runs out after 3 minutes without clicks.' },
+              { da: 'Oprette en bruger og logge ind. Kodeord gemmes med bcrypt (hash + salt), og en session med express-session holder dig logget ind. Den udløber efter 3 minutter, hvis du ikke klikker.', en: 'Create a user and log in. Passwords are saved with bcrypt (hash + salt), and a session with express-session keeps you logged in. It runs out if you don’t click anything for 3 minutes.' },
               { da: 'Forsiden viser alle quizzer og dine egne. Man tager en quiz ved at vælge svar i dropdowns og får resultatet i procent.', en: 'The front page shows all quizzes and your own. You take a quiz by picking answers in dropdowns and get the result in percent.' },
               { da: 'Lave en quiz: navn, kategori og tre spørgsmål. Svarene skrives adskilt med ":", og man vælger nummeret på det rigtige. Serveren tjekker, at der er mindst 4 svar, at nummeret findes, og at navnet ikke er taget.', en: 'Make a quiz: a name, a category and three questions. The answers are written separated by ":", and you pick the number of the right one. The server checks that there are at least 4 answers, that the number exists and that the name isn’t taken.' },
               { da: 'Kontosiden: skift brugernavn, e-mail og kodeord, eller slet kontoen (dine quizzer slettes også).', en: 'The account page: change your username, e-mail and password, or delete your account (your quizzes are deleted too).' },
@@ -389,8 +389,8 @@ export const content = {
           {
             title: { da: 'Om demoen', en: 'About the demo' },
             text: {
-              da: 'Demoen her bruger en mock-backend i stedet for Express og MongoDB: siderne er de originale Handlebars-skabeloner, og links og formularer går til en kopi af serverens routes, der kører i din browser – med de samme redirects og JSON-beskeder. Data gemmes kun hos dig. Log ind med demo / demo1234, eller lav din egen bruger. "Reset demo" sætter alt tilbage. Små rettelser, markeret med "DEMO" i koden: man kan nu skifte kun brugernavn eller e-mail (før skulle man skifte begge), dine quizzer følger med, når du skifter navn, og profilbilledet tegnes lokalt. Koden på GitHub er uændret.',
-              en: 'This demo uses a mock backend instead of Express and MongoDB: the pages are the original Handlebars templates, and links and forms go to a copy of the server’s routes that runs in your browser – with the same redirects and JSON messages. The data is only saved on your device. Log in with demo / demo1234, or make your own user. "Reset demo" puts everything back. Small fixes, marked "DEMO" in the code: you can now change just your username or e-mail (before, you had to change both), your quizzes follow along when you change your name, and the profile picture is drawn locally. The code on GitHub is unchanged.',
+              da: 'Demoen her bruger en mock-backend i stedet for Express og MongoDB: siderne er de originale Handlebars-skabeloner, og links og formularer går til en kopi af serverens routes, der kører i din browser, med de samme redirects og JSON-beskeder. Data gemmes kun hos dig. Log ind med demo / demo1234, eller lav din egen bruger. "Reset demo" sætter alt tilbage. Små rettelser, markeret med "DEMO" i koden: man kan nu skifte kun brugernavn eller e-mail (før skulle man skifte begge), dine quizzer følger med, når du skifter navn, og profilbilledet tegnes lokalt. Koden på GitHub er uændret.',
+              en: 'This demo uses a mock backend instead of Express and MongoDB: the pages are the original Handlebars templates, and links and forms go to a copy of the server’s routes that runs in your browser, with the same redirects and JSON messages. The data is only saved on your device. Log in with demo / demo1234, or make your own user. "Reset demo" puts everything back. Small fixes, marked "DEMO" in the code: you can now change just your username or e-mail (before, you had to change both), your quizzes follow along when you change your name, and the profile picture is drawn locally. The code on GitHub is unchanged.',
             },
           },
         ],
@@ -400,7 +400,7 @@ export const content = {
         label: { da: 'UI-design · Figma', en: 'UI design · Figma' },
         meta: { da: 'Vejr-app · UI-design i Figma', en: 'Weather app · UI design in Figma' },
         text: {
-          da: 'En vejr-app, jeg har designet i Figma, gjort til en demo, du kan klikke i – med live vejrdata.',
+          da: 'En vejr-app, jeg har designet i Figma, gjort til en demo, du kan klikke rundt i, med live vejrdata.',
           en: 'A weather app I designed in Figma, turned into a clickable demo with live weather data.',
         },
         tags: ['Figma', 'UI design', { da: 'Prototype', en: 'Prototype' }, { da: 'AI-demo', en: 'AI-built demo' }],
@@ -408,15 +408,15 @@ export const content = {
           {
             title: { da: 'Om projektet', en: 'About the project' },
             text: {
-              da: 'Et vejr-app-koncept, som jeg har designet fra bunden som prototype i Figma. For at vise designet frem er prototypen blevet gjort til en interaktiv demo ved hjælp af AI, så du selv kan klikke rundt i den – med live vejrdata fra Open-Meteo. Projektet viser først og fremmest mine evner inden for grafisk design og UI.',
-              en: 'A weather app concept that I designed from scratch as a prototype in Figma. To show the design off, the prototype was turned into an interactive demo with the help of AI, so you can click around in it yourself – with live weather data from Open-Meteo. The project mainly shows my skills in graphic and UI design.',
+              da: 'Et vejr-app-koncept, som jeg har designet fra bunden som prototype i Figma. For at vise designet frem er prototypen blevet gjort til en interaktiv demo ved hjælp af AI, så du selv kan klikke rundt i den, med live vejrdata fra Open-Meteo. Projektet viser først og fremmest mine evner inden for grafisk design og UI.',
+              en: 'A weather app concept that I designed from scratch as a prototype in Figma. To show the design off, the prototype was turned into an interactive demo with the help of AI, so you can click around in it yourself, with live weather data from Open-Meteo. The project mainly shows my skills in graphic and UI design.',
             },
           },
         ],
         app: 'weather', // design screens + app file, see Apps.jsx
         // names of the 4 design screens (in the same order as the pictures)
         screens: [
-          { da: 'Forside – find dit lokale vejr', en: 'Home – find your local weather' },
+          { da: 'Forside: find dit lokale vejr', en: 'Home: find your local weather' },
           { da: 'Vejret i en by', en: 'Weather in a city' },
           { da: 'Time for time', en: 'Hour by hour' },
           { da: 'Menu', en: 'Menu' },

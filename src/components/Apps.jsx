@@ -135,7 +135,7 @@ export default function Apps({ lang }) {
         <ScreenZoom
           screens={apps[design.app].screens}
           wide={apps[design.app].wide}
-          labels={design.screens.map((s) => `${pick(design.name, lang)} – ${pick(s, lang)}`)}
+          labels={design.screens.map((s) => `${pick(design.name, lang)} · ${pick(s, lang)}`)}
           t={t}
           onClose={() => setDesign(null)}
         />
