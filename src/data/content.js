@@ -414,10 +414,9 @@ export const content = {
           },
         ],
         app: 'weather', // design screens + app file, see Apps.jsx
-        // names of the 4 design screens (in the same order as the pictures)
+        // names of the 3 design screens (in the same order as the pictures)
         screens: [
-          { da: 'Forside: find dit lokale vejr', en: 'Home: find your local weather' },
-          { da: 'Vejret i en by', en: 'Weather in a city' },
+          { da: 'Forside: dit lokale vejr lige nu', en: 'Home: your local weather right now' },
           { da: 'Time for time', en: 'Hour by hour' },
           { da: 'Menu', en: 'Menu' },
         ],

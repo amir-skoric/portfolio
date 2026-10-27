@@ -6,12 +6,11 @@ import AppModal from './AppModal'
 import ScreenZoom from './ScreenZoom'
 import ProjectCard from './ProjectCard'
 import FeaturedCase from './Projects'
-// The weather app: a picture of all 4 design screens (for the card) + each screen on its own (for the zoom)
+// The weather app: a picture of all 3 design screens (for the card) + each screen on its own (for the zoom)
 import weatherOverview from '../assets/weather-design/overview.webp'
 import weather1 from '../assets/weather-design/screen-1.webp'
 import weather2 from '../assets/weather-design/screen-2.webp'
 import weather3 from '../assets/weather-design/screen-3.webp'
-import weather4 from '../assets/weather-design/screen-4.webp'
 // Screenshots of the three school projects (taken from their demos)
 import webshopImage from '../assets/projects/webshop.webp'
 import twitterImage from '../assets/projects/twitter-clone.webp'
@@ -48,7 +47,7 @@ import quizShot6 from '../assets/projects/quiz/6.webp'
 const apps = {
   weather: {
     image: weatherOverview,
-    screens: [weather1, weather2, weather3, weather4],
+    screens: [weather1, weather2, weather3],
     load: () => import('../demos/weather-app.html?raw'),
   },
   webshop: {
